@@ -5,7 +5,6 @@
 #include <exception>
 using namespace std;
 
-// ---------- Base Class ----------
 class Person {
 protected:
     string name; int id;
@@ -15,7 +14,6 @@ public:
     virtual ~Person() {}
 };
 
-// ---------- Derived Classes ----------
 class Member : public Person {
     static int count;
     int borrowed;
@@ -39,7 +37,6 @@ public:
     }
 };
 
-// ---------- Book Class ----------
 class Book {
     string title, author; int id; bool issued;
 public:
@@ -59,7 +56,6 @@ public:
     }
 };
 
-// ---------- Template Function ----------
 template <class T>
 int searchItem(const vector<T>& v, T item) {
     for (size_t i = 0; i < v.size(); i++)
@@ -67,7 +63,6 @@ int searchItem(const vector<T>& v, T item) {
     return -1;
 }
 
-// ---------- Library Class ----------
 class Library {
     vector<Book> books;
     vector<Member> members;
@@ -98,7 +93,6 @@ public:
     const vector<Book>& getBooks() const { return books; }
 };
 
-// ---------- Main ----------
 int main() {
     Library L;
     L.addBook({"Engineering Mathematics Genius", "B.S. Grewal", 1});
